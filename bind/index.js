@@ -1,10 +1,15 @@
 
+/**
+ * 实现功能
+ * 1. 绑定作用域
+ * 2. 传递参数
+ */
 Function.prototype._bind = _bind;
 function _bind() {
     let _this = this;
     let args = [...arguments];
     let fn = function() {
-        _this.apply(args[0], args.slice(1));
+        _this.apply(args[0], args.slice(1).concat(arguments));
     }
     //添加原函数所有的prototype的值
     fn.prototype = this.prototype;
