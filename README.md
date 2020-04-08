@@ -2,5 +2,5 @@
 
 ## feature
 * [x] bind  
-* [ ] promise
+* [x] promise
 
